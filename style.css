@@ -1,0 +1,221 @@
+/* VARIABLES */
+
+:root {
+  --primary-one: hsl(0, 36%, 70%);
+  --primary-two: hsl(0, 93%, 68%);
+  --secondary-one: hsl(0, 6%, 24%);
+  --secondary-two: hsl(0, 38%, 85%);
+  --gradient-one: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+  --gradient-two: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+}
+
+/* MOBILE */
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: linear-gradient(var(--gradient-one));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  padding: 30px 25px;
+}
+
+.logo {
+  width: 30%;
+}
+
+.img-mobile {
+  content: url("/images/hero-mobile.jpg");
+  width: 100%;
+}
+
+.main-text {
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  padding: 50px 0 20px;
+  color: var(--secondary-one);
+}
+
+.title span {
+  font-weight: 200;
+  color: var(--primary-one);
+}
+
+.text {
+  margin: auto;
+  max-width: 500px;
+  padding: 0 30px 20px;
+  line-height: 150%;
+  font-size: 14px;
+  color: var(--primary-one);
+}
+
+form {
+  width: 300px;
+  height: 45px;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#email {
+  border-style: none;
+  border-radius: 50px;
+  border: 1px solid var(--secondary-two);
+  height: 45px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#email::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--secondary-two);
+}
+
+#email:focus {
+  outline: none;
+  border: 2px solid var(--primary-one);
+}
+
+.error-icon {
+  display: none;
+  position: absolute;
+  top: 25%;
+  right: 70px;
+}
+
+button {
+  width: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50px;
+  border-style: none;
+  background-image: linear-gradient(var(--gradient-two));
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 10px 15px var(--secondary-two);
+  opacity: 0.9;
+}
+
+button img {
+  vertical-align: middle;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+/* ERROR */
+
+form.error input {
+  border: 2px solid var(--primary-two) !important;
+}
+
+form.error button {
+  opacity: 0.5;
+}
+
+form.error .error-icon {
+  display: block;
+  margin-right: 15px;
+}
+
+form.error::after {
+  content: "Please provide a valid email";
+  color: var(--primary-two);
+  font-size: 10px;
+  padding: 10px 0 10px 23px;
+  float: left;
+}
+
+/* FOOTER */
+
+#content-wrap {
+  padding-bottom: 3.5rem;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1rem;
+  padding-top: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* DESKTOP */
+
+@media (min-width: 1414px) {
+  body {
+    background-image: url("/images/bg-pattern-desktop.svg"),
+      linear-gradient(var(--gradient-one));
+    background-size: cover;
+    background-position: left;
+  }
+
+  .img-desktop {
+    content: url("/images/hero-desktop.jpg");
+    height: 100vh;
+    width: auto;
+    float: right;
+  }
+
+  .img-mobile {
+    content: unset;
+  }
+
+  #nav {
+    padding: 60px 10%;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .main-text {
+    text-align: left;
+    padding: 0 10%;
+  }
+
+  .title {
+    font-size: 75px;
+  }
+
+  .text {
+    margin: unset;
+    padding: unset;
+    font-size: 16px;
+    max-width: 450px;
+  }
+
+  form {
+    float: left;
+    margin-top: 40px;
+    width: 430px;
+  }
+
+  button {
+    width: 80px;
+  }
+}
