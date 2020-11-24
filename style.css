@@ -27,11 +27,13 @@ body {
 
 .logo {
   width: 30%;
+  max-width: 200px;
 }
 
 .img-mobile {
   content: url("/images/hero-mobile.jpg");
-  width: 100%;
+  /* max-width: 100%; */
+  margin: auto;
 }
 
 .main-text {
@@ -135,7 +137,7 @@ form.error .error-icon {
 form.error::after {
   content: "Please provide a valid email";
   color: var(--primary-two);
-  font-size: 10px;
+  font-size: 12px;
   padding: 10px 0 10px 23px;
   float: left;
 }
@@ -166,7 +168,7 @@ form.error::after {
 
 /* DESKTOP */
 
-@media (min-width: 1414px) {
+@media (min-width: 1160px) {
   body {
     background-image: url("/images/bg-pattern-desktop.svg"),
       linear-gradient(var(--gradient-one));
@@ -176,7 +178,8 @@ form.error::after {
 
   .img-desktop {
     content: url("/images/hero-desktop.jpg");
-    height: 100vh;
+    object-fit: cover;
+    max-height: 100vh;
     width: auto;
     float: right;
   }
